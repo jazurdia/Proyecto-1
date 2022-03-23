@@ -17,6 +17,12 @@ public class SepararString {
         return final_array;
     }
 
+    public double stringToDouble(String string){
+        double num = Double.parseDouble(string);
+        return num;
+
+    }
+
 
 
 }
