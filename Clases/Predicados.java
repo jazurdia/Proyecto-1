@@ -12,7 +12,7 @@ public class Predicados {
      * @param a Primer número a comparar
      * @param b Segundo número a comparar
      * @return boolean
-     */
+     *//
     public boolean isEqual(double a, double b){
         boolean ans = false;
         if(a == b){
