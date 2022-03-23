@@ -9,6 +9,10 @@ public class ScannerSintax {
 			return 2;
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [$0-9.]+ [0-9.]+[)]{1}$", expresion))	
 			return 3; 
+		else if (evaluate("^[(]{1}[+-*/]{1} [A-z]+ [A-z]+[)]{1}$",expresion))	
+			return 4; 
+		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [A-z]+[)]{1}$", expresion))
+			return 5;	
 		else 
 			return -1; 
     }
