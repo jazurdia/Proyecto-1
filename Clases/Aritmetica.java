@@ -16,9 +16,9 @@ public class Aritmetica<T> {
         this.operacion = operacion;
     }
 
-    public T suma() {
+    /*public T suma() {
         T ans = numero_a + numero_b;
         return ans;
-    }
+    }*/
 
 }
