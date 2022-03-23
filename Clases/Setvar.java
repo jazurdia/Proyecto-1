@@ -3,15 +3,15 @@ import java.util.HashMap;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 public class Setvar {
-    private HashMap<String, Integer> myVars;
+    private HashMap<String, Double> myVars;
     public Setvar(){
-        myVars= new HashMap<String, Integer>(); 
+        myVars= new HashMap<String, Double>(); 
     }
     public void SetVar(String expresion) {
         Pattern pattern = Pattern.compile("[ ]+[a-z]+[ ]+", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(expresion);
         String Nombre = "";
-	    Integer Valor = 0; 
+	    double Valor = 0; 
         if (matcher.find()) {
             Nombre = matcher.group();
         }
