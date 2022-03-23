@@ -5,18 +5,10 @@
 package Clases;
 
 public class Aritmetica {
-
-    double numero_a;
-    double numero_b;
-    String operacion;
-
-    public Aritmetica(double numero_a, double numero_b, String operacion) {
-        this.numero_a = numero_a;
-        this.numero_b = numero_b;
-        this.operacion = operacion;
+    public Aritmetica() {
     }
 
-    public double execute_aritmetica(String operacion){
+    public double execute_aritmetica(double numero_a, double numero_b, String operacion){
         double ans;
 
         switch (operacion) {
