@@ -5,8 +5,10 @@ public class ScannerSintax {
     public static int getExpresion(String expresion) {
         if (evaluate("^[(][ ]*setq[ ]+[a-z]+[ ]+[0-9]+[ ]*[)]$",expresion)) //This is a simple assignment using setq
 			return 1;
-		else if (evaluate("^[(][ ]*[+][ ]+([a-z]+|[0-9]+)[ ]+([a-z]+|[0-9]+)[ ]*[)]$",expresion)) //This is a simple add operation of 2 operands
+		else if (evaluate("^[(]{1}[+-*/]{1} [0-9.]+ [0-9.]+[)]{1}$",expresion)) //This is a simple add operation of 2 operands
 			return 2;
+		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [$0-9.]+ [0-9.]+[)]{1}$", expresion))	
+			return 3; 
 		else 
 			return -1; 
     }
