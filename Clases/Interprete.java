@@ -16,16 +16,17 @@ public class Interprete {
                 SetVar(expresion);
                 break;
         
-            case 2:
+            case 2: // operar. Debe llevar aritmetica o predicados. 
 
-                String expresion_array[] = expresion.split(" ");
+                /*
+                String expresion_array[] = expresion.split(regex, limit)
                 double a = Double.parseDouble(expresion_array[1]);
-                double b = Double.parseDouble(expresion_array[2]);
+                double b = Double.parseDouble(expresion_array[2]); // Aquí está el error. Toma en cuenta el paréntesis de cierre. 
+                // "1.0)"
                 double respuesta =  aritmetica.execute_aritmetica(a, b, expresion_array[0]);
-
                 System.out.println(respuesta);
-
                 //(+ 1 (+ 1 2))
+                */
 
                 break;
         }
