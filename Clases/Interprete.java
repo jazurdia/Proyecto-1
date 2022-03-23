@@ -5,6 +5,9 @@ import java.util.regex.Matcher;
 public class Interprete {
     private HashMap<String, Double> myVars;
     private Aritmetica aritmetica = new Aritmetica();
+    private Predicados predicados = new Predicados();
+    private SepararString sep = new SepararString();
+     
 
     public Interprete(){
         myVars= new HashMap<String, Double>(); 
@@ -16,7 +19,7 @@ public class Interprete {
                 SetVar(expresion);
                 break;
         
-            case 2: // operar. Debe llevar aritmetica o predicados. 
+            case 2: // operar. Debe llevar aritmetica o predicados.
 
                 /*
                 String expresion_array[] = expresion.split(regex, limit)
@@ -27,6 +30,22 @@ public class Interprete {
                 System.out.println(respuesta);
                 //(+ 1 (+ 1 2))
                 */
+
+
+                double respuesta = 0.0;
+                boolean respuesta2 = false;
+                String array_of_strings[] = sep.separar(expresion);
+                String signo = array_of_strings[0];
+
+                if(signo == "+" || signo == "-" || signo == "*" || signo == "/"){
+                    respuesta = aritmetica.execute_aritmetica(expresion);
+                }else if(signo == "==" || signo == "<" || signo == ">"){
+                    respuesta2 = predicados.comparar(expresion);
+                }
+        
+
+
+
 
                 break;
         }
