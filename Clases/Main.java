@@ -2,6 +2,7 @@ package Clases;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        /**
         Interprete miLispInterpreter = new Interprete();
         Vista v=new Vista(); 
 		Scanner in = new Scanner(System.in);
@@ -10,6 +11,11 @@ public class Main {
         String opt = "";
         opt = in.nextLine();
         miLispInterpreter.Operar(opt);
+
+        */
+
+        Aritmetica aritmetica = new Aritmetica();
+        aritmetica.execute_aritmetica_2("(+ 1.0 2.0)");
 
     }
 }
