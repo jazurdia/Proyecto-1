@@ -13,15 +13,12 @@ public class Operaciones {
         String signo = instrucciones_array[0];
         if(signo == "+"|| signo == "-" || signo == "*" || signo == "/"){
             double temp = aritmetica.execute_aritmetica(instrucciones)
-
-
+            ans = String.valueOf(temp);
+    
         }else ( signo == "=="|| signo == "<" || signo == ">"){
-
+            boolean temp = predicados.comparar(instrucciones);
+            ans = String.valueOf(temp);
         }
-
-
         return ans;
     }
-
-    
 }
