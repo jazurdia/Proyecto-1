@@ -4,21 +4,37 @@
 
 package Clases;
 
-public class Aritmetica<T> {
-
-    T numero_a;
-    T numero_b;
-    T operacion;
-
-    public Aritmetica(T numero_a, T numero_b, T operacion) {
-        this.numero_a = numero_a;
-        this.numero_b = numero_b;
-        this.operacion = operacion;
+public class Aritmetica {
+    public Aritmetica() {
     }
 
-    /*public T suma() {
-        T ans = numero_a + numero_b;
+    public double execute_aritmetica(double numero_a, double numero_b, String operacion){
+        double ans;
+
+        switch (operacion) {
+            case "+":
+                ans = numero_a + numero_b;
+                break;
+        
+            case "-":
+                ans = numero_a - numero_b;
+                break;
+
+            case "*":
+                ans = numero_a * numero_b;
+                break;
+
+            case "/":
+                ans = numero_a / numero_b;
+                break;
+
+            default:
+                ans = 0;
+                break;
+
+        }
+        
         return ans;
-    }*/
+    }
 
 }
