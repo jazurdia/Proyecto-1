@@ -4,17 +4,29 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 public class Interprete {
     private HashMap<String, Double> myVars;
+    private Aritmetica aritmetica = new Aritmetica();
+
     public Interprete(){
         myVars= new HashMap<String, Double>(); 
     }
-    public void Operar(String expresion) {
+    public void Operar(String expresion) { // "+ 2 2"
         int state = ScannerSintax.getExpresion(expresion);
         switch (state) {
             case 1:
                 SetVar(expresion);
                 break;
         
-            default:
+            case 2:
+
+                String expresion_array[] = expresion.split(" ");
+                double a = Double.parseDouble(expresion_array[1]);
+                double b = Double.parseDouble(expresion_array[2]);
+                double respuesta =  aritmetica.execute_aritmetica(a, b, expresion_array[0]);
+
+                System.out.println(respuesta);
+
+                //(+ 1 (+ 1 2))
+
                 break;
         }
     }
