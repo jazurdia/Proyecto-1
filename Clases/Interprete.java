@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 public class Interprete {
     private HashMap<String, Double> myVars;
-    private Aritmetica aritmetica = new Aritmetica();
+    Operaciones op = new Operaciones();
 
     public Interprete(){
         myVars= new HashMap<String, Double>(); 
@@ -27,6 +27,9 @@ public class Interprete {
                 System.out.println(respuesta);
                 //(+ 1 (+ 1 2))
                 */
+
+                String result = op.operar(expresion);
+                System.out.println(result);
 
                 break;
         }

@@ -1,9 +1,9 @@
 package Clases;
 
 public class Operaciones {
-    Aritmetica aritmetica = new Aritmetica();
-    Predicados predicados = new Predicados();
-    SepararString sep = new SepararString();
+    private Aritmetica aritmetica = new Aritmetica();
+    private Predicados predicados = new Predicados();
+    private SepararString sep = new SepararString();
     public Operaciones(){}
 
     public String operar(String instrucciones){
