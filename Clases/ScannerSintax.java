@@ -7,12 +7,16 @@ public class ScannerSintax {
 			return 1;
 		else if (evaluate("^[(]{1}[+\\-*/]{1} [0-9.]+ [0-9.]+[)]{1}$",expresion)) //This is a simple add operation of 2 operands
 			return 2;
-		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [$0-9.]+ [0-9.]+[)]{1}$", expresion))	
+		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [0-9.]+ [0-9.]+[)]{1}$", expresion))	
 			return 3; 
 		else if (evaluate("^[(]{1}[+\\-*/]{1} [A-z]+ [A-z]+[)]{1}$",expresion))	
 			return 4; 
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [A-z]+[)]{1}$", expresion))
-			return 5;	
+			return 5; 
+		else if (evaluate("^[(]{1}[=]{2} [A-z]+ [A-z]+[)]{1}$", expresion))		
+			return 6; 
+		else if (evaluate("^[(]{1}[=]{2} [0-9.]+ [0-9.]+[)]{1}$", expresion))	
+			return 7; 	
 		else 
 			return -1; 
     }
