@@ -20,7 +20,7 @@ public class ScannerSintax {
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [A-z]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con variables	
 			return 3; 
 		else if (evaluate("^[(]{1}[=]{2} [A-z]+ [A-z]+[)]{1}$", expresion))	//Comparacion == con variables
-			return 3; 
+			return 4; 
 		else if (evaluate("^[(]{1}[=]{2} [0-9.]+ [0-9.]+[)]{1}$", expresion))	//Comparacion == con numeros
 			return 2; 	
 		else 
