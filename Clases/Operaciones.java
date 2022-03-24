@@ -17,7 +17,8 @@ public class Operaciones {
         if (signo.equals("+") || signo.equals("-") || signo.equals("*") || signo.equals("/")) {
             double temp = aritmetica.execute_aritmetica(instrucciones);
             ans = String.valueOf(temp); // ""+""
-        } else if (signo.equals("==") || signo.equals("<") || signo.equals(">")) {
+        } else if (signo.equals("==") || signo.equals("<") || signo.equals(">") || signo.equals("<=")
+                || signo.equals(">=")) {
             boolean temp = predicados.comparar(instrucciones);
             ans = String.valueOf(temp);
         }

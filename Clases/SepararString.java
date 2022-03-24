@@ -1,14 +1,15 @@
 package Clases;
 
 public class SepararString {
-    public SepararString(){}
+    public SepararString() {
+    }
 
     /**
      * 
      * @param string string con paréntesis
-     * @return devuelve un array con estructura [signo, numero, numero] 
+     * @return devuelve un array con estructura [signo, numero, numero]
      */
-    public String[] separar(String string){
+    public String[] separar(String string) {
 
         string = string.replace("(", "");
         string = string.replace(")", "");
@@ -17,12 +18,8 @@ public class SepararString {
         return final_array;
     }
 
-    public double stringToDouble(String string){
+    public double stringToDouble(String string) {
         double num = Double.parseDouble(string);
         return num;
-
     }
-
-
-
 }

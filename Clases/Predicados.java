@@ -40,6 +40,22 @@ public class Predicados {
         return ans;
     }
 
+    public boolean isGreaterOrEqual(double a, double b) {
+        boolean ans = false;
+        if (a >= b) {
+            ans = true;
+        }
+        return ans;
+    }
+
+    public boolean isLesserOrEqual(double a, double b) {
+        boolean ans = false;
+        if (a <= b) {
+            ans = true;
+        }
+        return ans;
+    }
+
     /**
      * 
      * @param a Primer número a comparar
@@ -73,6 +89,15 @@ public class Predicados {
             case ">": // isGreater
                 ans = isGreater(num1, num2);
                 break;
+
+            case ">=":
+                ans = isGreaterOrEqual(num1, num2);
+                break;
+
+            case "<=":
+                ans = isLesserOrEqual(num1, num2);
+                break;
+
         }
 
         return ans;
