@@ -9,7 +9,7 @@ public class ScannerSintax {
 	 * @return int - número de tipo de expresion
 	 */
 	public static int getExpresion(String expresion) {
-        if (evaluate("^[(][ ]*setq[ ]+[a-z]+[ ]+[0-9]+[ ]*[)]$",expresion)) //Asignación de variables SETQ
+        if (evaluate("^[(][ ]*setq[ ]+[A-z]+[ ]+[0-9]+[ ]*[)]$",expresion)) //Asignación de variables SETQ
 			return 1;
 		else if (evaluate("^[(]{1}[+\\-*/]{1} [0-9.]+ [0-9.]+[)]{1}$",expresion)) //Operaciónes aritmeticas +-*/ numeros
 			return 2;
