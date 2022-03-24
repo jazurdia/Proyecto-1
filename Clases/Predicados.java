@@ -120,4 +120,43 @@ public class Predicados {
         return ans;
     }
 
+    /**
+     * Este método utiliza varios parametros en vez de una sola cadena de texto.
+     * 
+     * @param comparador comparador entre parametro a y parametro b
+     * @param a          primero numero
+     * @param b          segundo numero
+     * @return booleano de la comparación.
+     */
+    public boolean comparar(String comparador, String a, String b) {
+        boolean ans = false;
+
+        double num1 = sep.stringToDouble(a);
+        double num2 = sep.stringToDouble(b);
+
+        switch (comparador) {
+            case "==": // equals
+                ans = isEqual(num1, num2);
+                break;
+
+            case "<": // isLesser
+                ans = isLesser(num1, num2);
+                break;
+
+            case ">": // isGreater
+                ans = isGreater(num1, num2);
+                break;
+
+            case ">=":
+                ans = isGreaterOrEqual(num1, num2);
+                break;
+
+            case "<=":
+                ans = isLesserOrEqual(num1, num2);
+                break;
+        }
+
+        return ans;
+    }
+
 }
