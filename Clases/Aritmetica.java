@@ -3,6 +3,7 @@
  */
 
 package Clases;
+
 public class Aritmetica {
 
     SepararString sep = new SepararString();
@@ -10,7 +11,7 @@ public class Aritmetica {
     public Aritmetica() {
     }
 
-    public double execute_aritmetica(String string){
+    public double execute_aritmetica(String string) {
         double ans;
         String operacion_string[] = sep.separar(string);
 
@@ -24,22 +25,22 @@ public class Aritmetica {
                 break;
 
             case "-":
-                ans = num1 + num2;
+                ans = num1 - num2;
                 break;
 
             case "*":
-                ans = num1 + num2;
+                ans = num1 * num2;
                 break;
 
             case "/":
-                ans = num1 + num2;
+                ans = num1 / num2;
                 break;
 
             default:
                 ans = 0;
                 break;
         }
-        
+
         return ans;
     }
 }
