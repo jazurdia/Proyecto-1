@@ -3,39 +3,12 @@
  */
 
 package Clases;
+
 public class Predicados {
 
     SepararString sep = new SepararString();
 
-    public Predicados(){}
-
-    /**
-     * 
-     * @param a Primer número a comparar
-     * @param b Segundo número a comparar
-     * @return boolean
-     */
-    public boolean isEqual(double a, double b){
-        boolean ans = false;
-        if(a == b){
-            ans = true;
-        }
-        return ans;
-    
-    }
-    
-    /**
-     * 
-     * @param a Primer número a comparar
-     * @param b Segundo número a comparar
-     * @return boolean
-     */
-    public boolean isGreater(double a, double b){
-        boolean ans = false;
-        if(a < b){
-            ans = true;
-        }
-        return ans;
+    public Predicados() {
     }
 
     /**
@@ -44,15 +17,44 @@ public class Predicados {
      * @param b Segundo número a comparar
      * @return boolean
      */
-    public boolean isLesser(double a, double b){
+    public boolean isEqual(double a, double b) {
         boolean ans = false;
-        if(a < b){
+        if (a == b) {
+            ans = true;
+        }
+        return ans;
+
+    }
+
+    /**
+     * 
+     * @param a Primer número a comparar
+     * @param b Segundo número a comparar
+     * @return boolean
+     */
+    public boolean isGreater(double a, double b) {
+        boolean ans = false;
+        if (a > b) {
             ans = true;
         }
         return ans;
     }
 
-    public boolean comparar(String string){
+    /**
+     * 
+     * @param a Primer número a comparar
+     * @param b Segundo número a comparar
+     * @return boolean
+     */
+    public boolean isLesser(double a, double b) {
+        boolean ans = false;
+        if (a < b) {
+            ans = true;
+        }
+        return ans;
+    }
+
+    public boolean comparar(String string) {
         boolean ans = false;
         String operacion_string[] = sep.separar(string);
         String signo = operacion_string[0];
@@ -60,21 +62,20 @@ public class Predicados {
         double num2 = sep.stringToDouble(operacion_string[2]);
 
         switch (signo) {
-            case "==": //equals
-                ans = isEqual(num1, num2);     
+            case "==": // equals
+                ans = isEqual(num1, num2);
                 break;
 
-            case "<": //isLesser
-                ans = isLesser(num1, num2);     
+            case "<": // isLesser
+                ans = isLesser(num1, num2);
                 break;
 
-            case ">": //isGreater
+            case ">": // isGreater
                 ans = isGreater(num1, num2);
                 break;
         }
 
         return ans;
     }
-
 
 }
