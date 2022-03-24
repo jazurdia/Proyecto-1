@@ -12,7 +12,7 @@ public class Interprete {
         myVars = new HashMap<String, Double>();
     }
 
-    public void Operar(String expresion) { // "+ 2 2"
+    public void Operar(String expresion) { 
         int state = ScannerSintax.getExpresion(expresion);
         switch (state) {
             case 1:
@@ -28,7 +28,7 @@ public class Interprete {
     }
 
     public void SetVar(String expresion) {
-        Pattern pattern = Pattern.compile("[ ]+[a-z]+[ ]+", Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("[ ]+[A-z]+[ ]+", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(expresion);
         String Nombre = "";
         double Valor = 0;
