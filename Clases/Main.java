@@ -13,9 +13,9 @@ public class Main {
         String opt = "";
         do {
             opt = in.nextLine();
-            if (!opt.toUpperCase().equals("EXIT")){
+            if (!opt.toUpperCase().equals("EXIT")) {
                 LispInterpreter.Operar(opt);
-            }else{
+            } else {
                 v.despedida();
             }
         } while (!opt.toUpperCase().equals("EXIT"));
