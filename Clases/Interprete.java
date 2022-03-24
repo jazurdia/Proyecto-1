@@ -21,7 +21,7 @@ public class Interprete {
 
             case 2: // operar. Debe llevar aritmetica o predicados.
                 String result = op.operar(expresion);
-                System.out.println(result);
+                v.print(result);
 
                 break;
             case -1:
@@ -43,6 +43,6 @@ public class Interprete {
             Valor = Integer.parseInt(matcher.group().trim());
         }
         myVars.put(Nombre, Valor);
-        System.out.println("Variable: " + Nombre + " asignada con valor " + Valor);
+        v.print("Variable: " + Nombre + " asignada con valor " + Valor);
     }
 }
