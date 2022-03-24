@@ -13,26 +13,15 @@ public class Operaciones {
 
         String instrucciones_array[] = sep.separar(instrucciones);
         String signo = instrucciones_array[0];
-        
-        /*
-        if (signo == "+" || signo == "-" || signo == "*" || signo == "/") {
-            double temp = aritmetica.execute_aritmetica(instrucciones);
-            ans = String.valueOf(temp); //""+""
 
-        } else if (signo == "==" || signo == "<" || signo == ">") {
+        if (signo.equals("+") || signo.equals("-") || signo.equals("*") || signo.equals("/")) {
+            double temp = aritmetica.execute_aritmetica(instrucciones);
+            ans = String.valueOf(temp); // ""+""
+        } else if (signo.equals("==") || signo.equals("<") || signo.equals(">")) {
             boolean temp = predicados.comparar(instrucciones);
             ans = String.valueOf(temp);
         }
-        */
 
-        if(signo.equals("+") || signo.equals("-")|| signo.equals("*") ||signo.equals("/")) {
-            double temp = aritmetica.execute_aritmetica(instrucciones);
-            ans = String.valueOf(temp); //""+""
-        }else if(signo.equals("==")||signo.equals("<")||signo.equals("*")||signo.equals(">")){
-            boolean temp = predicados.comparar(instrucciones);
-            ans = String.valueOf(temp);
-        }
-        
         return ans;
     }
 }
