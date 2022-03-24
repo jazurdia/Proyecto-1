@@ -11,7 +11,7 @@ public class ScannerSintax {
 																					// 2 operands
 			return 2;
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [0-9.]+ [0-9.]+[)]{1}$", expresion))
-			return 2; // Mora te mamaste.
+			return 3;
 		else if (evaluate("^[(]{1}[+\\-*/]{1} [A-z]+ [A-z]+[)]{1}$", expresion))
 			return 4;
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [A-z]+[)]{1}$", expresion))
