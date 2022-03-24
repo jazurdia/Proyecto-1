@@ -2,6 +2,7 @@
 UVG Algoritmos y Estructuras de Datos (2022) | Proyecto 1 Interprete LISP
 
 Link en Trello: https://trello.com/b/GUhPR2aI/proyecto-1
+[Guía Proyecto 1.pdf](https://github.com/jazurdia/Proyecto-1/files/8338177/Proyecto1.2.pdf)
 
 Autores: 
   Diego Alejandro Morales, 
@@ -14,4 +15,3 @@ Autores:
  - El programa únicamente acepta operaciones con el siguiente formato: ("signo u operando" "número o variable "numero o variable"), de acuerdo con la estructura de LISP. 
  - El programa no acepta operaciones complejas (con más de un par de paréntesis).
  - El programa únicamente trabaja con números de formato double. 
-[Proyecto1 (2).pdf](https://github.com/jazurdia/Proyecto-1/files/8338177/Proyecto1.2.pdf)
