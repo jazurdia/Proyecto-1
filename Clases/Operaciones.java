@@ -56,4 +56,11 @@ public class Operaciones {
 
         return ans;
     }
+
+    public String operarVar(String instrucciones, String valor1, String valor2) {
+
+        String instrucciones_array[] = sep.separar(instrucciones);
+
+        return "";
+    }
 }

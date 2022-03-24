@@ -7,6 +7,7 @@ import java.util.regex.Matcher;
 public class Interprete {
     private HashMap<String, Double> myVars;
     Operaciones op = new Operaciones();
+    SepararString sep = new SepararString();
     Vista v = new Vista();
 
     public Interprete() {
@@ -26,14 +27,29 @@ public class Interprete {
 
                 break;
 
-            case 3: // operaciones con variables.
+            case 3: // (dos variables)
 
-                String operador;
-                String var1;
-                String var2;
+                // (setqu x 10)
+                // (setqu y 5)
+                // "(+ y x)" -> expresion
+                String result2;
+                String instrucciones_array[] = sep.separar(expresion); // {"+", "y", "x"}
 
-                String resullt2 = op.operar(operador, var1, var2);
-                v.print(resullt2);
+                if (MapContainsVar(instrucciones_array[1]) && MapContainsVar(instrucciones_array[2])) {
+                    for (int i = 1; i < instrucciones_array.length; i++) {
+                        instrucciones_array[i] = instrucciones_array[i].replace(instrucciones_array[i],
+                                getValue(instrucciones_array[i])); // modificando ambos elementos del array EN ORDEN de
+                                                                   // aparición en el array.
+                    }
+                    // ya modifiqué mi array.
+
+                    result2 = op.operar(instrucciones_array[0], instrucciones_array[1], instrucciones_array[2]);
+
+                } else {
+                    result2 = "Ocurrió un error";
+                }
+
+                v.print(result2);
                 break;
 
             case -1:
@@ -58,9 +74,8 @@ public class Interprete {
         v.print("Variable: " + Nombre + " asignada con valor " + Valor);
     }
 
-    public double getValue(String a) {
-        double value = 0;
-        value = myVars.get(a);
+    public String getValue(String a) {
+        String value = String.valueOf(myVars.get(a));
         return value;
     }
 
