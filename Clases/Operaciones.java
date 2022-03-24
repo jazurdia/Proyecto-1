@@ -8,6 +8,11 @@ public class Operaciones {
     public Operaciones() {
     }
 
+    /**
+     * 
+     * @param instrucciones instrucciones en formato LISP.
+     * @return string, que puede ser int o boolean casteado a string.
+     */
     public String operar(String instrucciones) {
         String ans = "";
 

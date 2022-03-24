@@ -18,6 +18,11 @@ public class SepararString {
         return final_array;
     }
 
+    /**
+     * 
+     * @param string "Double" en formato String.
+     * @return convertido a double.
+     */
     public double stringToDouble(String string) {
         double num = Double.parseDouble(string);
         return num;

@@ -11,6 +11,11 @@ public class Aritmetica {
     public Aritmetica() {
     }
 
+    /**
+     * 
+     * @param string instrucciones en formato LISP como String.
+     * @return resultado de la operación aritmética.
+     */
     public double execute_aritmetica(String string) {
         double ans;
         String operacion_string[] = sep.separar(string);
