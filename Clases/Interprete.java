@@ -48,11 +48,16 @@ public class Interprete {
 
     public double getValue(String a){
         double value=0; 
-        try {
-            value=myVars.get(a); 
-        } catch (Exception e) {
-            v.print("Error: Variable no encontrada");
+        value=myVars.get(a);
+        return value;  
+    }
+
+    public boolean MapContainsVar(String a) {
+        if (myVars.containsKey(a)) {
+            return true; 
+        } else {
+            return false; 
         }
-        return value; 
+        
     }
 }
