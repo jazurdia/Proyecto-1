@@ -7,12 +7,13 @@ import java.util.regex.Matcher;
 public class Interprete {
     private HashMap<String, Double> myVars;
     Operaciones op = new Operaciones();
-    Vista v = new Vista(); 
+    Vista v = new Vista();
+
     public Interprete() {
         myVars = new HashMap<String, Double>();
     }
 
-    public void Operar(String expresion) { 
+    public void Operar(String expresion) {
         int state = ScannerSintax.getExpresion(expresion);
         switch (state) {
             case 1:
@@ -24,6 +25,17 @@ public class Interprete {
                 v.print(result);
 
                 break;
+
+            case 3: // operaciones con variables.
+
+                String operador;
+                String var1;
+                String var2;
+
+                String resullt2 = op.operar(operador, var1, var2);
+                v.print(resullt2);
+                break;
+
             case -1:
                 v.print("Error: Expresión invalida");
         }
@@ -46,18 +58,18 @@ public class Interprete {
         v.print("Variable: " + Nombre + " asignada con valor " + Valor);
     }
 
-    public double getValue(String a){
-        double value=0; 
-        value=myVars.get(a);
-        return value;  
+    public double getValue(String a) {
+        double value = 0;
+        value = myVars.get(a);
+        return value;
     }
 
     public boolean MapContainsVar(String a) {
         if (myVars.containsKey(a)) {
-            return true; 
+            return true;
         } else {
-            return false; 
+            return false;
         }
-        
+
     }
 }
