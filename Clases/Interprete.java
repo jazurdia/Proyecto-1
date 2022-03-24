@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 public class Interprete {
     private HashMap<String, Double> myVars;
     Operaciones op = new Operaciones();
-
+    Vista v = new Vista(); 
     public Interprete() {
         myVars = new HashMap<String, Double>();
     }
@@ -24,6 +24,8 @@ public class Interprete {
                 System.out.println(result);
 
                 break;
+            case -1:
+                v.print("Error: Expresión invalida");
         }
     }
 
