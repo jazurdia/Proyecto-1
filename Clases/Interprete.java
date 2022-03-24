@@ -5,13 +5,12 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
 public class Interprete {
-    private HashMap<String, Double> myVars;
+    HashMap<String, Double> myVars=new HashMap<String, Double>();
     Operaciones op = new Operaciones();
     SepararString sep = new SepararString();
     Vista v = new Vista();
-
+    
     public Interprete() {
-        myVars = new HashMap<String, Double>();
     }
 
     public void Operar(String expresion) {
@@ -34,8 +33,7 @@ public class Interprete {
                 // "(+ y x)" -> expresion
                 String result2;
                 String instrucciones_array[] = sep.separar(expresion); // {"+", "y", "x"}
-
-                if (MapContainsVar(instrucciones_array[1]) && MapContainsVar(instrucciones_array[2])) {
+                if (MapContainsVar(instrucciones_array[1])==true && MapContainsVar(instrucciones_array[2])==true) {
                     for (int i = 1; i < instrucciones_array.length; i++) {
                         instrucciones_array[i] = instrucciones_array[i].replace(instrucciones_array[i],
                                 getValue(instrucciones_array[i])); // modificando ambos elementos del array EN ORDEN de
@@ -46,7 +44,7 @@ public class Interprete {
                     result2 = op.operar(instrucciones_array[0], instrucciones_array[1], instrucciones_array[2]);
 
                 } else {
-                    result2 = "Ocurrió un error";
+                    result2 = "Error: Variable no encontrada";
                 }
 
                 v.print(result2);
@@ -71,16 +69,17 @@ public class Interprete {
             Valor = Integer.parseInt(matcher.group().trim());
         }
         myVars.put(Nombre, Valor);
+    
         v.print("Variable: " + Nombre + " asignada con valor " + Valor);
     }
 
     public String getValue(String a) {
-        String value = String.valueOf(myVars.get(a));
+        String value = String.valueOf(myVars.get(" "+a+" "));
         return value;
     }
 
     public boolean MapContainsVar(String a) {
-        if (myVars.containsKey(a)) {
+        if (myVars.containsKey(" "+a+" ")==true) {
             return true;
         } else {
             return false;
