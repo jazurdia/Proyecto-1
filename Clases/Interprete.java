@@ -45,4 +45,14 @@ public class Interprete {
         myVars.put(Nombre, Valor);
         v.print("Variable: " + Nombre + " asignada con valor " + Valor);
     }
+
+    public double getValue(String a){
+        double value=0; 
+        try {
+            value=myVars.get(a); 
+        } catch (Exception e) {
+            v.print("Error: Variable no encontrada");
+        }
+        return value; 
+    }
 }
