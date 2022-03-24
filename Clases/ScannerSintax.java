@@ -15,14 +15,26 @@ public class ScannerSintax {
 			return 2;
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [0-9.]+ [0-9.]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con numeros	
 			return 2; 
-		else if (evaluate("^[(]{1}[+\\-*/]{1} [A-z]+ [A-z]+[)]{1}$",expresion))	//Operaciónes aritmeticas +-*/ Variables
-			return 3; 
-		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [A-z]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con variables	
-			return 3; 
-		else if (evaluate("^[(]{1}[=]{2} [A-z]+ [A-z]+[)]{1}$", expresion))	//Comparacion == con variables
-			return 3; 
 		else if (evaluate("^[(]{1}[=]{2} [0-9.]+ [0-9.]+[)]{1}$", expresion))	//Comparacion == con numeros
 			return 2; 	
+		else if (evaluate("^[(]{1}[+\\-*/]{1} [A-z]+ [A-z]+[)]{1}$",expresion))	//Operaciónes aritmeticas +-*/ Variables
+			return 3; 
+		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [A-z]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con 2 variables	
+			return 3; 
+		else if (evaluate("^[(]{1}[=]{2} [A-z]+ [A-z]+[)]{1}$", expresion))	//Comparacion == con 2 variables
+			return 3; 
+		else if (evaluate("^[(]{1}[=]{2} [0-9.]+ [A-z]+[)]{1}$", expresion))	//Comparacion == con (Numero, Var)
+			return 4;
+		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [0-9.]+ [A-z]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con (Numero, Var)
+			return 4; 
+		else if (evaluate("^[(]{1}[+\\-*/]{1} [0-9.]+ [A-z]+[)]{1}$",expresion))	//Operaciónes aritmeticas +-*/ (Numero, Var)
+			return 4; 		 	
+		else if (evaluate("^[(]{1}[=]{2} [A-z]+ [0-9.]+[)]{1}$", expresion))	//Comparacion == con 2 (Var, Numero)
+			return 5; 	
+		else if (evaluate("^[(]{1}[+\\-*/]{1} [A-z]+ [0-9.]+[)]{1}$",expresion))	//Operaciónes aritmeticas +-*/ (Var, Numero)
+			return 5; 
+		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [0-9.]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con (Var, Numero)
+			return 5; 			
 		else 
 			return -1; 
     }
