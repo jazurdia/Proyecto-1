@@ -7,17 +7,19 @@ Link en Trello: https://trello.com/b/GUhPR2aI/proyecto-1
 
 Autores: 
   Diego Alejandro Morales, 
-  Maria Marta Ramírez, 
   Javier Alejandro Azurdia.
   
  Este Proyecto pretende construir un intérprete de LISP básico, poniendo a prueba los conocimientos adquiridos en el curso de Algoritmos y Estructuras de datos. 
 
   El programa puede:
-  - Hacer operaciones en formato lisp
+  - Hacer operaciones simples en formato LISP
+  - Puede utilizar variables
+  - Puede declarar y ejecutar funciones simples. 
 
  
  Las siguientes son las restricciones del programa:
  - El programa únicamente acepta operaciones con el siguiente formato: ("signo u operando" "número o variable "numero o variable"), de acuerdo con la estructura de LISP. 
  - El programa no acepta operaciones complejas (con más de un par de paréntesis).
  - El programa requiere que, al operar 2 variables, estas se instancien antes de realizar dicha operación. 
- 
+ - Para declarar una función, se debe hacer de la siguiente forma:
+    - (defun nombre_funcion (variable) (signo variable/numero variable/numero))
