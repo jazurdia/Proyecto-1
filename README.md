@@ -9,9 +9,12 @@ Autores:
   Diego Alejandro Morales, 
   Javier Alejandro Azurdia.
   
- Este Proyecto pretende construir un intérprete de LISP básico, poniendo a prueba los conocimientos adquiridos en el curso de Algoritmos y Estructuras de datos. 
+ Este Proyecto pretende construir un intérprete de LISP básico, 
+poniendo a prueba los conocimientos adquiridos en el curso de Algoritmos y Estructuras de datos. 
+* Se recomienda utilizar IntelliJ para utilizar el programa. 
+* Se recomienda usar JDK Java 11.
 
-  El programa puede:
+El programa puede:
   - Hacer operaciones simples en formato LISP
   - Puede utilizar variables
   - Puede declarar y ejecutar funciones simples. 
