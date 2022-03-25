@@ -109,7 +109,7 @@ public class Interprete {
                 v.print(resultados4);
                 break;
 
-            case 7: // defun y var, num.
+            case 7: // defun y num, var.
 
                 // **** CONSTRUCCION DE DEFUN ****
                 // quitamos los paréntesis.
@@ -142,13 +142,15 @@ public class Interprete {
                 // si la variable está en la segunda mierda esa.
 
                 String resultados40 = op.operar(String.valueOf(instrucciones_raw0.get(0)),
-                        String.valueOf(valores0.get(0)), String.valueOf(instrucciones_raw0.get(2)));
+                        String.valueOf(instrucciones_raw0.get(1)), String.valueOf(valores0.get(0)));
                 v.print(resultados40);
                 break;
 
             case -1:
                 v.print("Error: Expresión invalida");
         }
+
+        v.print("Ingrese otra operación: ");
     }
 
     public void SetVar(String expresion) {
