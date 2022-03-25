@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c645247-6411-44d3-af75-aedca051fbe1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.AritmeticaTest.testExecute_aritmetica">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Proyecto-1" />
@@ -60,9 +59,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AritmeticaTest.testExecute_aritmetica" />
         <item itemvalue="JUnit.AritmeticaTest.execute_aritmetica" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
