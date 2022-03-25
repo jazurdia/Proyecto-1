@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c645247-6411-44d3-af75-aedca051fbe1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Clases/AritmeticaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Proyecto-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/Aritmetica.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Aritmetica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/Defun.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Defun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/Interprete.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Interprete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/Operaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Operaciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/Predicados.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Predicados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/ScannerSintax.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/ScannerSintax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/SepararString.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/SepararString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clases/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,14 +30,30 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/Clases" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AritmeticaTest.testExecute_aritmetica">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Proyecto-1" />
@@ -46,8 +61,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AritmeticaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AritmeticaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AritmeticaTest.testExecute_aritmetica" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AritmeticaTest" />
+      <option name="METHOD_NAME" value="testExecute_aritmetica" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AritmeticaTest.testExecute_aritmetica" />
+        <item itemvalue="JUnit.AritmeticaTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -60,11 +96,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646859384355</updated>
-      <workItem from="1648218728699" duration="386000" />
+      <workItem from="1648218728699" duration="962000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
