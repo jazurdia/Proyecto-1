@@ -75,7 +75,7 @@ public class Funciones {
 
         operations.push(operations);
         if(operations.peek().contains("+") || operations.peek().contains("-") || operations.peek().contains("*") || operations.peek().contains("/")){
-            new OperacionesAritmeticas(operations.pop());
+            new Operaciones(operations.pop());
         }else if(operations.peek().contains("Cond")){ 
             new Condicionales(operations.pop());
         }
