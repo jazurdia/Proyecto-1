@@ -73,7 +73,7 @@ public class Interprete {
                 v.print(result4);
                 break;
 
-            case 6: // defun UNA VARIABLE.
+            case 6: // defun y var, num.
 
                 // **** CONSTRUCCION DE DEFUN ****
                 // quitamos los paréntesis.
@@ -102,9 +102,49 @@ public class Interprete {
 
                 List<Object> instrucciones_raw = def.executeInstructions(valores); // {"+", "num", "num"}
 
+                // si la variable está en la segunda mierda esa.
+
                 String resultados4 = op.operar(String.valueOf(instrucciones_raw.get(0)),
                         String.valueOf(valores.get(0)), String.valueOf(instrucciones_raw.get(2)));
                 v.print(resultados4);
+                break;
+
+            case 7: // defun y var, num.
+
+                // **** CONSTRUCCION DE DEFUN ****
+                // quitamos los paréntesis.
+                String new_expresion0 = expresion;
+                new_expresion0 = new_expresion0.replace("(", "");
+                new_expresion0 = new_expresion0.replace(")", "");
+                new_expresion0 = new_expresion0.replace("defun ", "");
+
+                String expresion_array0[] = new_expresion0.split(" ");// {"sum", "a", "+", "a", "10"} "(defun sum (a) (+
+                                                                      // a
+                                                                      // 10)"
+                String funName0 = expresion_array0[0]; // "sum" [0]
+                ArrayList<String> lista_var0 = new ArrayList<>();
+                lista_var0.add(expresion_array0[1]); // "a" [1]
+                ArrayList<String> instrucciones0 = new ArrayList<>();
+                for (int i = 2; i < expresion_array0.length; i++) { // "+", "a", "10"
+                    instrucciones0.add(expresion_array0[i]);
+                }
+
+                // for (int n = 0; n < instrucciones.size(); n++) {
+                // v.print(instrucciones.get(n).toString()); // instrucciones para:
+                // defun.execute(... instrucciones)
+                // }
+
+                Defun def0 = new Defun(funName0, lista_var0, instrucciones0);
+                ArrayList<Double> valores0 = v.funcion(funName0, 1);
+
+                List<Object> instrucciones_raw0 = def0.executeInstructions(valores0); // {"+", "num", "num"}
+
+                // si la variable está en la segunda mierda esa.
+
+                String resultados40 = op.operar(String.valueOf(instrucciones_raw0.get(0)),
+                        String.valueOf(valores0.get(0)), String.valueOf(instrucciones_raw0.get(2)));
+                v.print(resultados40);
+                break;
 
             case -1:
                 v.print("Error: Expresión invalida");
