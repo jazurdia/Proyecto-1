@@ -1,4 +1,4 @@
-package Clases;
+//package Clases;
 
 public class SepararString {
     public SepararString() {
