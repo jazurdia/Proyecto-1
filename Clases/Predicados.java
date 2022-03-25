@@ -2,7 +2,7 @@
  * Autor: Alejandro Azurdia (asignado)
  */
 
-package Clases;
+//package Clases;
 
 public class Predicados {
 

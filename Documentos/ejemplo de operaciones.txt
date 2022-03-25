@@ -1,6 +1,0 @@
-(setq a 10)
-(setq b 8)
-(+ 1 9)
-(<= a 10)
-(* a b)
-(defun funcion (a) (- a 9))

@@ -1,4 +1,12 @@
-package Clases;
+//package Clases;
+
+/**
+ *
+ * Proyecto 1: Interprete para LISP
+ * Autores: Diego Morales y Alejandro Azurdia
+ * Ingeniería en Computación y Tecnologías de la información.
+ * Estructuras de bases de datos. 
+ */
 
 import java.util.Scanner;
 
