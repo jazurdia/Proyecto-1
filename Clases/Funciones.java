@@ -12,7 +12,7 @@ public class Funciones {
 
     //private LinkedList<Integer> values = new LinkedList<>();
     private String name;
-    private String isntruc;
+    private String instruc;
     private String operations;
     private String parametros;
 
@@ -55,18 +55,55 @@ public class Funciones {
 
     /**
      * Metodo 
-     * PENDIENTE
+     * 
      */
     public void doFuncion(){
+        if(operations.contains("Cond")){
+            for (int j = 5; j < operations.length() ; j++) {
+                if(operations.charAt(j) == 'a' || operations.charAt(j) == 'b' || operations.charAt(j) == 'c' || operations.charAt(j) == 'd'
+                        || operations.charAt(j) == 'e' || operations.charAt(j) == 'f'){
+                    operations = operations.replace(Character.toString(operations.charAt(j)), values.removeLast().toString());
+                }
+
+            }
+        }else {
+            for (int j = 0; j < operations.length() ; j++) {
+                if(operations.charAt(j) == 'a' || operations.charAt(j) == 'b' || operations.charAt(j) == 'c' || operations.charAt(j) == 'd'
+                        || operations.charAt(j) == 'e' || operations.charAt(j) == 'f'){
+                    operations = operations.replace(Character.toString(operations.charAt(j)), values.removeLast().toString());
+                }
+
+            }
+        }
+
+        operations.push(operations);
+        if(operations.peek().contains("+") || operations.peek().contains("-") || operations.peek().contains("*") || operations.peek().contains("/")){
+            new OperacionesAritmeticas(operations.pop());
+        }else if(operations.peek().contains("Cond")){ 
+            new Condicionales(operations.pop());
+        }
+
+        if(operations.size() > 0){
+            realizarFuncion();
+        }else{
+            return;
+        }
         
-        //if()
     }
 
 
     /**
+     * 
+     * @return
+     */
+    public String getName(){
+        return name;
+    }
+
+    /**
      * @param name
      */
-    public void getName(String name){
+    public void setName(String name){
         this.name = name;
     }
 
