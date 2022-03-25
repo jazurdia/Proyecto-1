@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c645247-6411-44d3-af75-aedca051fbe1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Clases/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clases/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/.idea/Proyecto-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/.idea/Proyecto-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PredicadosTest.testComparar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Proyecto-1" />
@@ -100,11 +104,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PredicadosTest.testComparar" />
         <item itemvalue="JUnit.PredicadosTest.comparar" />
         <item itemvalue="JUnit.AritmeticaTest.testExecute_aritmetica" />
         <item itemvalue="JUnit.AritmeticaTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

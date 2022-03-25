@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c645247-6411-44d3-af75-aedca051fbe1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Clases/AritmeticaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/.idea/Proyecto-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/.idea/Proyecto-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +47,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.AritmeticaTest">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Proyecto-1" />
@@ -60,10 +72,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AritmeticaTest.testExecute_aritmetica" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AritmeticaTest" />
+      <option name="METHOD_NAME" value="testExecute_aritmetica" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PredicadosTest.comparar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PredicadosTest" />
+      <option name="METHOD_NAME" value="comparar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PredicadosTest.testComparar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PredicadosTest" />
+      <option name="METHOD_NAME" value="testComparar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AritmeticaTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PredicadosTest.testComparar" />
+        <item itemvalue="JUnit.PredicadosTest.comparar" />
+        <item itemvalue="JUnit.AritmeticaTest.testExecute_aritmetica" />
+        <item itemvalue="JUnit.AritmeticaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -75,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646859384355</updated>
-      <workItem from="1648218728699" duration="759000" />
+      <workItem from="1648218728699" duration="1112000" />
     </task>
     <servers />
   </component>
