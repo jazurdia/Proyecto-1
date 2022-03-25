@@ -27,10 +27,6 @@ public class Interprete {
                 break;
 
             case 3: // (dos variables)
-
-                // (setqu x 10)
-                // (setqu y 5)
-                // "(+ y x)" -> expresion
                 String result2;
                 String instrucciones_array[] = sep.separar(expresion); // {"+", "y", "x"}
                 if (MapContainsVar(instrucciones_array[1]) == true && MapContainsVar(instrucciones_array[2]) == true) {
@@ -39,8 +35,6 @@ public class Interprete {
                                 getValue(instrucciones_array[i])); // modificando ambos elementos del array EN ORDEN de
                                                                    // aparición en el array.
                     }
-                    // ya modifiqué mi array.
-
                     result2 = op.operar(instrucciones_array[0], instrucciones_array[1], instrucciones_array[2]);
 
                 } else {
