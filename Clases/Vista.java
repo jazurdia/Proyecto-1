@@ -22,10 +22,20 @@ public class Vista {
         System.out.println("Ha ocurrido un error");
     }
 
+    
+    /** 
+     * @param string
+     */
     public void print(String string) {
         System.out.println(string);
     }
 
+    
+    /** 
+     * @param nombre
+     * @param variables
+     * @return ArrayList<Double>
+     */
     public ArrayList<Double> funcion(String nombre, int variables) {
         System.out.println("Ingrese el/los valores de: " + nombre);
         ArrayList<Double> valores_variables = new ArrayList<>();

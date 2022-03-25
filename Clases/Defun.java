@@ -42,16 +42,13 @@ public class Defun {
         List tempInstructions = this.instructions;
         HashMap<String, Object> tempVariables = this.variables;// Mapa temporal para almacenar el valor constante de
                                                                // cada variable
-        // System.out.println(tempInstructions);
         if (variables.size() == tempVariables.size()) {// verifica si la lista es del tamaño necesario para ejecutar la
                                                        // funcion
-            // System.out.println("Entra");
             int i = 0;
             for (String key : tempVariables.keySet()) {// Toma cada elemento del map y le asigna un Value
                 tempVariables.replace(key, variables.get(i));
                 i++;
             }
-            // System.out.println(tempInstructions);
             i = 0;
             while (i < tempInstructions.size()) {
                 if ((tempInstructions.get(i) instanceof String)) {// Toma cada elemento de las instrucciones
@@ -91,6 +88,10 @@ public class Defun {
         return tempInstructions;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getFunName() {
         return this.funName;
     }

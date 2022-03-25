@@ -15,6 +15,10 @@ public class Interprete {
     public Interprete() {
     }
 
+    
+    /** 
+     * @param expresion
+     */
     public void Operar(String expresion) {
         int state = ScannerSintax.getExpresion(expresion);
         switch (state) {
@@ -154,6 +158,10 @@ public class Interprete {
         v.print("Ingrese otra operación: ");
     }
 
+    
+    /** 
+     * @param expresion
+     */
     public void SetVar(String expresion) {
         Pattern pattern = Pattern.compile("[ ]+[A-z]+[ ]+", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(expresion);
@@ -172,11 +180,21 @@ public class Interprete {
         v.print("Variable: " + Nombre + " asignada con valor " + Valor);
     }
 
+    
+    /** 
+     * @param a
+     * @return String
+     */
     public String getValue(String a) {
         String value = String.valueOf(myVars.get(" " + a + " "));
         return value;
     }
 
+    
+    /** 
+     * @param a
+     * @return boolean
+     */
     public boolean MapContainsVar(String a) {
         if (myVars.containsKey(" " + a + " ") == true) {
             return true;
