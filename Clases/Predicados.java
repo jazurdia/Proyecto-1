@@ -92,7 +92,7 @@ public class Predicados {
         String operacion_string[] = sep.separar(string);
         String signo = operacion_string[0];
         double num1 = sep.stringToDouble(operacion_string[1]);
-        double num2 = sep.stringToDouble(operacion_string[2]);
+        double num2 = sep.stringToDouble(operacion_string[2]); //// {"+", "1", "2"}
 
         switch (signo) {
             case "==": // equals

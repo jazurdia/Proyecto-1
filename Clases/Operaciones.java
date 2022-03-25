@@ -16,7 +16,7 @@ public class Operaciones {
     public String operar(String instrucciones) {
         String ans = "";
 
-        String instrucciones_array[] = sep.separar(instrucciones);
+        String instrucciones_array[] = sep.separar(instrucciones);// {"+", "1", "2"}
         String signo = instrucciones_array[0];
 
         if (signo.equals("+") || signo.equals("-") || signo.equals("*") || signo.equals("/")) {
@@ -55,12 +55,5 @@ public class Operaciones {
         }
 
         return ans;
-    }
-
-    public String operarVar(String instrucciones, String valor1, String valor2) {
-
-        String instrucciones_array[] = sep.separar(instrucciones);
-
-        return "";
     }
 }
