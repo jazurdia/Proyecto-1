@@ -2,6 +2,7 @@ package Clases;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
@@ -72,37 +73,36 @@ public class Interprete {
                 v.print(result4);
                 break;
 
-            case 6: // defun UNA VARIABLE. 
+            case 6: // defun UNA VARIABLE.
 
-                // quitamos los paréntesis. 
+                // **** CONSTRUCCION DE DEFUN ****
+                // quitamos los paréntesis.
                 String new_expresion = expresion;
                 new_expresion = new_expresion.replace("defun", "");
                 new_expresion = new_expresion.replace("(", "");
                 new_expresion = new_expresion.replace(")", "");
 
-                String expresion_array[] = new_expresion.split(" ");//{"sum", "a", "+", "a", "10"}
-                String funName = expresion_array[0]; //"sum" [0]
+                String expresion_array[] = new_expresion.split(" ");// {"sum", "a", "+", "a", "10"}
+                String funName = expresion_array[0]; // "sum" [0]
                 ArrayList<String> lista_var = new ArrayList<>();
                 lista_var.add(expresion_array[1]); // "a" [1]
                 ArrayList<String> instrucciones = new ArrayList<>();
-                for(int i = 3; i<expresion_array.length; i++){ //"+", "a", "10"
+                for (int i = 3; i < expresion_array.length; i++) { // "+", "a", "10"
                     instrucciones.add(expresion_array[i]);
                 }
 
-                for(int n = 0; n < instrucciones.size(); n++){
-                    v.print(instrucciones.toString());
-                }
-                
+                // for (int n = 0; n < instrucciones.size(); n++) {
+                // v.print(instrucciones.get(n).toString()); // instrucciones para:
+                // defun.execute(... instrucciones)
+                // }
+
                 Defun def = new Defun(funName, lista_var, instrucciones);
-                // pedir que llame a la función
-                // funcion (valor)
-                // valor. 
-                //String valor = String.valueOf(v.funcion(funName));
-                ArrayList<Double> valores = 
+                ArrayList<Double> valores = v.funcion(funName, 1);
 
-                def.executeInstructions()
-
-                
+                List<Object> instrucciones_raw = def.executeInstructions(valores); // {"+", "num", "num"}
+                String resultados4 = op.operar(String.valueOf(instrucciones_raw.get(0)),
+                        String.valueOf(instrucciones_raw.get(1)), String.valueOf(instrucciones_raw.get(2)));
+                v.print(resultados4);
 
             case -1:
                 v.print("Error: Expresión invalida");
