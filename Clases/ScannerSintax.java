@@ -47,6 +47,14 @@ public class ScannerSintax {
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [0-9.]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con
 																						// (Var, Numero)
 			return 5;
+		else if (evaluate(
+				"[(]{1}[d]{1}[e]{1}[f]{1}[u]{1}[n]{1} [A-z]{1,20} [(][A-z]{1}[)] [(][+\\-*/<>]{0,1}[=]{0,2} [A-z]{1} [0-9.]+[)][)]$",
+				expresion))
+			return 6;
+		else if (evaluate(
+				"[(]{1}[d]{1}[e]{1}[f]{1}[u]{1}[n]{1} [A-z]{1,20} [(][A-z]{1}[)] [(][+\\-*/<>]{0,1}[=]{0,2} [0-9.]+ [A-z]+[)][)]$",
+				expresion))
+			return 7; // num, letra
 		else
 			return -1;
 	}
