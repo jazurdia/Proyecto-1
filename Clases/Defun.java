@@ -1,6 +1,5 @@
 package Clases;
 
-import javax.naming.NamingEnumeration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +11,7 @@ public class Defun {
     private List<Object> instructions;
 
     /**
-     * Constructor de Defunwd
+     * Constructor de Defun
      * 
      * @param funName Indica el nombre de la funcion
      * @param vars    Mapa con las variables de la funcion
@@ -20,13 +19,16 @@ public class Defun {
      */
     public Defun(String funName, Object vars, Object inst) {
 
-        List<String> variables = new ArrayList<>();
-        variables.add(vars.toString());
-        List instructions = (List) inst;
         this.funName = funName;
+
+        List<String> variables = new ArrayList<>();
+        variables.add(vars.toString()); // casteado a ArrayList porque es Obj
+        List instructions = (List) inst; // casteado porque inst es Obj.
+
         for (String item : variables) {
             this.variables.put(item, null);
         }
+
         this.instructions = instructions;
     }
 

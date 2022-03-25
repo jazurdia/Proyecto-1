@@ -1,5 +1,6 @@
 package Clases;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -70,6 +71,38 @@ public class Interprete {
                 }
                 v.print(result4);
                 break;
+
+            case 6: // defun UNA VARIABLE. 
+
+                // quitamos los paréntesis. 
+                String new_expresion = expresion;
+                new_expresion = new_expresion.replace("defun", "");
+                new_expresion = new_expresion.replace("(", "");
+                new_expresion = new_expresion.replace(")", "");
+
+                String expresion_array[] = new_expresion.split(" ");//{"sum", "a", "+", "a", "10"}
+                String funName = expresion_array[0]; //"sum" [0]
+                ArrayList<String> lista_var = new ArrayList<>();
+                lista_var.add(expresion_array[1]); // "a" [1]
+                ArrayList<String> instrucciones = new ArrayList<>();
+                for(int i = 3; i<expresion_array.length; i++){ //"+", "a", "10"
+                    instrucciones.add(expresion_array[i]);
+                }
+
+                for(int n = 0; n < instrucciones.size(); n++){
+                    v.print(instrucciones.toString());
+                }
+                
+                Defun def = new Defun(funName, lista_var, instrucciones);
+                // pedir que llame a la función
+                // funcion (valor)
+                // valor. 
+                //String valor = String.valueOf(v.funcion(funName));
+                ArrayList<Double> valores = 
+
+                def.executeInstructions()
+
+                
 
             case -1:
                 v.print("Error: Expresión invalida");

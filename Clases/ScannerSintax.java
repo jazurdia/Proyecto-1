@@ -47,6 +47,7 @@ public class ScannerSintax {
 		else if (evaluate("^[(]{1}[<>]{1}[=]{0,1} [A-z]+ [0-9.]+[)]{1}$", expresion)) // Comparacion <, >, <=, >= con
 																						// (Var, Numero)
 			return 5;
+		else if(evaluate("[(]{1}[defun]{1} [A-z]{1,2,3,4,5,6,7,8,9,10}+[(]{1}+[A-z]+[)]{1}+[(]{1}+[]+[)]{1}", expresion))	
 		else
 			return -1;
 	}
