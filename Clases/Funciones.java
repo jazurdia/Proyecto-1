@@ -5,7 +5,6 @@
 package Clases;
 
 import java.util.LinkedHashMap;
-//import java.util.LinkedList;
 import java.util.Stack;
 
 public class Funciones {
@@ -31,8 +30,6 @@ public class Funciones {
      */
 
     public void nuevaFuncion(String name, String parametros, String instruc, String operations){
-
-        LinkedHashMap<String, String> parametrosFuncion = new LinkedHashMap<String, String>();
         this.name = name;
         this.parametros = parametros;
         this.instruc = instruc;
@@ -54,9 +51,9 @@ public class Funciones {
     }
 
     /**
-     * Metodo 
-     * 
+     * Metodo
      */
+    //Referencia: utilizada en ejercicio, perfil de usuario: https://github.com/malonso-uvg?tab=repositories
     public void doFuncion(){
         if(operations.contains("Cond")){
             for (int j = 5; j < operations.length() ; j++) {
