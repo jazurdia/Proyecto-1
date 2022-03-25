@@ -29,10 +29,10 @@ public class Vista {
     public ArrayList<Double> funcion(String nombre, int variables) {
         System.out.println("Ingrese el/los valores de: " + nombre);
         ArrayList<Double> valores_variables = new ArrayList<>();
-        for (int i = 0; i < variables + 1; i++) {
-            print("valor de variable " + i);
-            valores_variables.add(scan.nextDouble());
-        }
+
+        print("valor de variable 1");
+        valores_variables.add(scan.nextDouble());
+
         return valores_variables;
 
     }

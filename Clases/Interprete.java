@@ -78,16 +78,17 @@ public class Interprete {
                 // **** CONSTRUCCION DE DEFUN ****
                 // quitamos los paréntesis.
                 String new_expresion = expresion;
-                new_expresion = new_expresion.replace("defun", "");
                 new_expresion = new_expresion.replace("(", "");
                 new_expresion = new_expresion.replace(")", "");
+                new_expresion = new_expresion.replace("defun ", "");
 
-                String expresion_array[] = new_expresion.split(" ");// {"sum", "a", "+", "a", "10"}
+                String expresion_array[] = new_expresion.split(" ");// {"sum", "a", "+", "a", "10"} "(defun sum (a) (+ a
+                                                                    // 10)"
                 String funName = expresion_array[0]; // "sum" [0]
                 ArrayList<String> lista_var = new ArrayList<>();
                 lista_var.add(expresion_array[1]); // "a" [1]
                 ArrayList<String> instrucciones = new ArrayList<>();
-                for (int i = 3; i < expresion_array.length; i++) { // "+", "a", "10"
+                for (int i = 2; i < expresion_array.length; i++) { // "+", "a", "10"
                     instrucciones.add(expresion_array[i]);
                 }
 
@@ -100,8 +101,9 @@ public class Interprete {
                 ArrayList<Double> valores = v.funcion(funName, 1);
 
                 List<Object> instrucciones_raw = def.executeInstructions(valores); // {"+", "num", "num"}
+
                 String resultados4 = op.operar(String.valueOf(instrucciones_raw.get(0)),
-                        String.valueOf(instrucciones_raw.get(1)), String.valueOf(instrucciones_raw.get(2)));
+                        String.valueOf(valores.get(0)), String.valueOf(instrucciones_raw.get(2)));
                 v.print(resultados4);
 
             case -1:
