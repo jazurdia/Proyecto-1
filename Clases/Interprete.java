@@ -148,6 +148,7 @@ public class Interprete {
 
             case -1:
                 v.print("Error: Expresión invalida");
+                break;
         }
 
         v.print("Ingrese otra operación: ");
