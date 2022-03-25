@@ -7,7 +7,6 @@ Link en Trello: https://trello.com/b/GUhPR2aI/proyecto-1
 
 Autores: 
   Diego Alejandro Morales, 
-  Maria Marta Ramírez, 
   Javier Alejandro Azurdia.
   
  Este Proyecto pretende construir un intérprete de LISP básico, poniendo a prueba los conocimientos adquiridos en el curso de Algoritmos y Estructuras de datos. 
